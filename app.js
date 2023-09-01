@@ -13,7 +13,7 @@ app.post('/echo', (req, res) => {
     } catch (error) {
         console.log(error)
     }
-    res.json({ message: '¡Hola, mundo!' });
+    res.json({ 'status': 'ok'});
 });
 
 // Manejador de errores para rutas no encontradas
