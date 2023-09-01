@@ -5,8 +5,8 @@ const port = process.env.PORT ?? 3000;
 app.use(express.static('public'))
 
 app.post('/echo', (req, res) => {
-    console.log(req.body);
-    res.statusCode(200).json(req.body);
+    console.log(req);
+    res.json(req)
 })
 
 app.listen(port, () => {
