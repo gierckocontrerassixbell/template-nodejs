@@ -7,7 +7,13 @@ app.use(express.json());
 
 // Ruta de ejemplo
 app.post('/echo', (req, res) => {
-  res.json({ message: '¡Hola, mundo!' });
+    try {
+        
+        console.log(req.body)
+    } catch (error) {
+        console.log(error)
+    }
+    res.json({ message: '¡Hola, mundo!' });
 });
 
 // Manejador de errores para rutas no encontradas
